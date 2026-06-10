@@ -11,7 +11,7 @@
 #include "src/xnnpack/packw.h"
 #include <benchmark/benchmark.h>
 
-#define XNN_UKERNEL(arch_flags, ukernel, nr, kr, sr, kblock, nr_scale)     \
+#define XNN_UKERNEL(arch_flags, ukernel, nr, kr, sr, kblock, nr_scale, izp)     \
   BENCHMARK_CAPTURE_BGEMM(qs8_qc4w_packw, ukernel##_, ukernel, nr, kr, sr, \
                           arch_flags);
 
