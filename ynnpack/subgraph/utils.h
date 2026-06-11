@@ -17,6 +17,8 @@ namespace ynn {
 bool allow_in_place(uint32_t input_id, uint32_t output_id,
                     const ynn_subgraph& subgraph);
 
+int compute_allow_in_place(const ynn_node& node, const ynn_subgraph& subgraph);
+
 // Clone a subset of the subgraph that is required to compute `output_id` from
 // `input_id`.
 //
